@@ -1,108 +1,187 @@
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-  }
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  #root, #__next {
-    isolation: isolate;
-  }
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Radio Canada Big", sans-serif;
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 4fr;
+  height: 100%;
+}
 
-  html{
-    height: 100%;
-  }
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
 
-  body{
-    font-family: "Radio Canada Big", sans-serif;
-    display: grid;
-    grid-template: 1fr 4fr/  1fr 3.5fr;
-    height: 100%;
-  }
+html {
+  height: 100%;
+}
 
-  header{
-    background-color: white;
-    grid-column:  2/3;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding: 20px;
-    align-items: center;
-  }
+header {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 18px;
+  padding-right: 18px;
+  align-items: center;
+  box-shadow: -4px 5px 8px -5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
 
-  .top{
-    display: flex;
-    justify-content: space-between;
-  }
+.top .left {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .top .left{
+.top .right {
+  display: flex;
+  flex: 0.4;
+  justify-content: end;
+  align-items: center;
+  padding-right: 70px;
+}
 
-  }
+.top .right img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px;
+}
 
-  .top .right{
+.top input[type="search"] {
+  height: 24px;
+  width: 95%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(229, 234, 240);
+}
 
-  }
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
 
-  .top input[type="search"]{
-    height: 24px;
-    width: 448px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(229, 234, 240);
-  }
+.bottom .left {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
 
-  .bottom{
-    display: flex;
-    justify-content: space-between;
-  }
+.bottom .left img {
+  width: 50px;
+  height: 50px;
+  margin-right: 18px;
+  border-radius: 50%;
+}
 
-  .bottom .left{
+
+.bottom .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.5;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.bottom button {
+  height: 33px;
+  width: 88px;
+  border-radius: 24px;
+  border: none;
+  background-color: rgb(100, 149, 255);
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+main {
+  background-color: rgb(191, 206, 219);
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template: 1fr 1fr/ 2.5fr 1fr;
+}
+
+.projects{
+  grid-row: 1/3;
+  display: grid;
+  grid-template: 0.05fr 1fr 1fr 1fr/1fr 1fr;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  gap: 20px;
+  align-items: end;
+}
+
+.projects h3{
+  grid-column: 1/3;
+}
+
+  .card{
     width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: grid;
+    grid-template: 1fr 0.2fr/ 8px 1fr;
+    overflow: hidden;
+    box-shadow: -4px 5px 5px -5px rgba(0, 0, 0, 0.5);
   }
 
-  .bottom .right{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 0.1;
-  }
-
-  .bottom button{
-    height: 33px;
-    width: 88px;
-    border-radius: 24px;
-    border: none;
-    background-color: rgb(100, 149, 255);
-    color: white;
-    font-size: 14px;
-    text-align: center;
-  }
-
-
-  main{
-    background-color: rgb(191, 206, 219);
-    grid-column: 2/3;
-    grid-row: 2/3;
-
-  }
-
-  .sidebar{
-    background-color: rgb(100, 149, 255);
-    grid-column: 1/2;
+  .card div{
     grid-row: 1/3;
+    background-color: orange;
   }
 
+  .card h4{
+    margin-top: 20px;
+    margin-left: 10px;
+  }
 
+.announc{
+  grid-column: 2/3;
+}
+
+.trending{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.sidebar {
+  background-color: rgb(100, 149, 255);
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: start;
+  gap: 8px;
+  padding: 20px;
+  padding-left: 40px;
+  grid-auto-rows: 30px;
+  color: white;
+}
