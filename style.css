@@ -126,6 +126,7 @@ main {
   grid-row: 2 / 3;
   display: grid;
   grid-template: 1fr 1fr/ 2.5fr 1fr;
+  min-height: 800px;
 }
 
 .projects{
@@ -166,11 +167,29 @@ main {
 
 .announc{
   grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+
+.announc .container{
+  grid-row: 2/-1;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 
 .trending{
   grid-column: 2/3;
   grid-row: 2/3;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+
+}
+.trending .container{
+  grid-row: 2/-1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
 
 .sidebar {
