@@ -237,7 +237,13 @@ main {
 }
 
 .trending .container div{
+  display: flex;
+  align-items: center;
+}
 
+.trending .container div div{
+  display: grid;
+  align-items: center;
 }
 
 .trending img {
